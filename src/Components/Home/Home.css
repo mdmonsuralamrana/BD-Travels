@@ -1,4 +1,4 @@
-.travel-system{
+.home-page{
     background-image: linear-gradient(90deg, #181818a1 , #0a0a0a9f), url(../Photos/Bg.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -19,6 +19,8 @@
     margin-top: 100px;
     margin-left: 100px;
     margin-right: 100px;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 .travel-via {
@@ -32,6 +34,6 @@
 
 .travel-via img {
     padding-top: 35px;
-    width: 50%;
+    width: 60%;
     height: 50%;
 }

@@ -1,8 +1,11 @@
 import firebase from "firebase/app";
 import "firebase/auth";
+import style from './Login.css';
 import firebaseConfig from "./firebase.config";
 import { useContext, useState } from 'react';
 import { UserContext } from '../../App';
+import { useHistory, useLocation } from "react-router";
+import { Button, ButtonBase } from '@material-ui/core';
 
 //using for first time browser error !! 
 
@@ -23,6 +26,9 @@ function Login() {
     password: '',
     photo: ''
   })
+  const history = useHistory();
+  const location = useLocation();
+  const { from } = location.state || { from: { pathname: "/" } };
 
   const [loggedInUser , setLoggedInUser] = useContext(UserContext)
 
@@ -40,7 +46,8 @@ function Login() {
           email: email,
           photo: photoURL
         }
-        setUser(signedInUser)
+        setUser(signedInUser);
+        history.replace(from);
       })
       .catch(err => {
         console.log(err);
@@ -155,30 +162,15 @@ function Login() {
   }
 
   return (
-    <div style={{textAlign: 'center'}}>
-      {
-        user.isSignedIn ? <button onClick={handleSignOut}>Sign out</button> :
-          <button onClick={handleSignIn}>Sign in</button>
-      }
-      <br />
-      <button onClick={handleFbSignIn}>Sign in with Facebook</button>
-      {
-        user.isSignedIn &&
-        <div>
-          <p> Welcome, {user.name}!</p>
-          <p>Your Email: {user.email}</p>
-          <img src={user.photo} alt="" />
-        </div>
-      }
-
-      <h1>Our own Authentication</h1>
+    <div className="login-page">
+      <h1>Create an account</h1>
       <input type="checkbox" onChange={() => setNewUser(!newUser)} name="newUser" id="" />
       <label htmlFor="newUser">New User? Sign Up</label>
 
-      <form onSubmit={handleSubmit}>
+      <form className="login-form" onSubmit={handleSubmit}>
         {newUser && <input type="text" onBlur={handleBlur} name="name" placeholder="Your Name" />}
         <br />
-        <input type="text" onBlur={handleBlur} name="email" placeholder="Your Email.." required />
+        <input type="text" onBlur={handleBlur} name="email" placeholder="Enter Your Email.." required />
         <br />
         <input type="password" onBlur={handleBlur} name="password" placeholder="Enter Your Password.." required />
         <br />
@@ -187,6 +179,14 @@ function Login() {
       <p style={{ color: 'red' }}>{user.error}</p>
       {
         user.success && <p style={{ color: 'green' }}>User {newUser ? 'Created' : "Logged In"} Successfully</p>
+      }
+
+      <br/>
+      <Button color="primary" onClick={handleFbSignIn}>Sign in with Facebook</Button>
+      <br/>
+      {
+        user.isSignedIn ? <button onClick={handleSignOut}>Sign out</button> :
+          <Button onClick={handleSignIn}>Sign in With Google</Button>
       }
     </div>
   );

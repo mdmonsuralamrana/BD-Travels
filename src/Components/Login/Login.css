@@ -1,0 +1,12 @@
+.login-page{
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size:30px;
+}
+.login-form input {
+    border-bottom: 1px solid black;
+    border: none;
+}

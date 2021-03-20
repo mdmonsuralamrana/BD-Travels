@@ -1,8 +1,9 @@
+.header{
+    z-index: 0;
+}
+
 .header img{
     height: 80px;
-}
-.header{
-    text-align: right;
 }
 .header nav{
     background-color: rgb(127, 102, 240);
