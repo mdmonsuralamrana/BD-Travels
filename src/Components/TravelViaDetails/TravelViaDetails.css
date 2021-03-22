@@ -8,6 +8,10 @@
     text-align: center;
 }
 
+.details h6 img{
+    width: 30px;
+}
+
 @media (min-width: 575px) {
     .details-box{
         float:inline-start;

@@ -1,21 +1,13 @@
 .destination-container{
     display:flex;
 }
-/* 
-.form-part {
-    width:30%;
-    padding:50px;
-    margin-top: 50px;
-    background-color:gray;
-} */
 
 .select-location{
-    background-color:gray;
+    background-color:aquamarine;
     border-radius:15px;
     width:30%;
     padding:50px;
     margin: 20px 50px;
-    background-color:gray;
 }
 
 .search-button{
@@ -54,7 +46,7 @@
     }
     .form-part{
         text-align:center;
-        background-color: gray;
+        background-color:aquamarine;
         background-position: center;
     }
     .destination-container{
