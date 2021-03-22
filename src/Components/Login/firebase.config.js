@@ -5,6 +5,5 @@ const firebaseConfig = {
     storageBucket: "assignment-9-react.appspot.com",
     messagingSenderId: "113769587296",
     appId: "1:113769587296:web:59bc9a5cb07a3d99d99905"
-  };
-
+  }
   export default firebaseConfig;

@@ -1,0 +1,42 @@
+.destination-container{
+    display:flex;
+}
+/* 
+.form-part {
+    width:30%;
+    padding:50px;
+    margin-top: 50px;
+    background-color:gray;
+} */
+
+.select-location{
+    background-color:gray;
+    border-radius:15px;
+    width:30%;
+    padding:50px;
+    margin: 20px 50px;
+    background-color:gray;
+}
+
+.search-button{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.travel-from{
+    text-align: left;
+}
+
+.travel-to{
+    text-align: left;
+}
+
+.search-button{
+    text-align: center;
+}
+
+.map-part{
+    width: 70%;
+    border-left: 1px solid black;
+    padding-left: 20px;
+}
