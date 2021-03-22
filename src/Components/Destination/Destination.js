@@ -4,6 +4,7 @@ import './Destination.css';
 import { fakeData } from '../FakeData/FakeData';
 import { travelContext } from '../../App';
 import TravelViaDetails from '../TravelViaDetails/TravelViaDetails';
+import map from '../Photos/Map.png';
 
 
 
@@ -37,17 +38,18 @@ const Destination = () => {
                 <div id="inputForm" className="form-part">
                     <div className="travel-from">
                         <p>Travel From</p>
-                        <input name='travelFrom' onBlur={handleChange} id="traveFrom" type="text" />
+                        <input name='travelFrom' onBlur={handleChange} id="traveFrom" type="text" placeholder="Type Here" />
                     </div>
                     <div className="travel-to">
                         <p>Travel To</p>
-                        <input name='travelTo' onBlur={handleChange} id="traveTo" type="text" />
+                        <input name='travelTo' onBlur={handleChange} id="traveTo" type="text" placeholder="Type Here" />
                     </div>
                     <button onClick={searchVehicles} type="button" className="search-button" class="btn btn-warning">Search</button>
                 </div>
                 <div id="travelDetails" style={{display:'none'}} className="">
-                    <div className="">
+                    <div className="travel-location">
                         <p>{travelFrom}</p>
+                        <p>To</p>
                         <p>{travelTo}</p>
                     </div>
                     {
@@ -56,7 +58,7 @@ const Destination = () => {
                 </div>
             </div>
             <div className="map-part">
-                <h3>image part</h3>
+                <img src={map} alt=""/>
             </div>
         </div>
     );

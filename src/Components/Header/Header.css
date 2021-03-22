@@ -22,7 +22,17 @@ nav a:hover{
     border-radius: 3px;
 }
 
-.name{
+.nav-link{
+    padding-left: 300px;
     text-align: left;
     z-index: 0;
+}
+
+@media(max-width:575px){
+    .navbar{
+        text-align: center;
+    }
+    .name{
+        text-align: center;
+    }
 }

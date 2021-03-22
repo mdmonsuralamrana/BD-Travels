@@ -1,3 +1,16 @@
-.details-box img{
-    width:50px;
+.details-box img {
+    width: 50px;
+}
+
+.details-box {
+    float: left;
+    margin-right: 30px;
+    text-align: center;
+}
+
+@media (min-width: 575px) {
+    .details-box{
+        float:inline-start;
+        margin-right: 30px;
+    }
 }

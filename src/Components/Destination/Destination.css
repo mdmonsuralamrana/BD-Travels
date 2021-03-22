@@ -40,3 +40,24 @@
     border-left: 1px solid black;
     padding-left: 20px;
 }
+
+.travel-location{
+    font-size: 30px;
+    color:lightsalmon;
+}
+
+@media (max-width:575px){
+    .travel-location{
+        font-size: 30px;
+        text-align: center;
+        padding-right: 20px;
+    }
+    .form-part{
+        text-align:center;
+        background-color: gray;
+        background-position: center;
+    }
+    .destination-container{
+        display:contents;
+    }
+}
